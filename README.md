@@ -1,5 +1,9 @@
 # reactjs-experiment
 
+Sources used to create this experiment:
+- https://facebook.github.io/react/docs/package-management.html
+- http://webpack.github.io/docs/usage.html
+
 In order to recreate this project from scratch, create five files:
 - index.html
 - webpack.config.js
