@@ -29,6 +29,8 @@ In order to recreate this project from scratch, create five files:
 ### Write webpack.config.js
 ```
 // webpack.config.js
+const webpack = require('webpack');
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -41,7 +43,17 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader'
     }]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    }),
+  ]
 };
 ```
 
